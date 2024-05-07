@@ -53,7 +53,7 @@ else:
             load_in_4bit=args.quant is not None,
             trust_remote_code=True
         )
-        device_map = infer_auto_device_map(model, max_memory={0:'20GiB',1:'20GiB','cpu':'16GiB'}, no_split_module_classes='CogVLMDecoderLayer')
+        device_map = infer_auto_device_map(model, max_memory={0:'20GiB',1:'20GiB', 2:'20GiB', 3:'20GiB','cpu':'16GiB'}, no_split_module_classes='CogVLMDecoderLayer')
         model = load_checkpoint_and_dispatch(
             model,
             # '~/.cache/modelscope/hub/ZhipuAI/cogvlm-chat/model.safetensors.index.json',
