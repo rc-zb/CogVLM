@@ -10,3 +10,5 @@ archive*
 hostfile
 runs/
 *.idea/
+
+.direnv/
